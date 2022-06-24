@@ -13,6 +13,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		6710C6F3286514DB00C07709 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6710C6F2286514DB00C07709 /* GoogleService-Info.plist */; };
+		6710C6F628651A7F00C07709 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6710C6F528651A7F00C07709 /* Poppins-Regular.ttf */; };
+		6710C6F828651E7600C07709 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6710C6F728651E7600C07709 /* Poppins-SemiBold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-QooperTodo-QooperTodoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-QooperTodo-QooperTodoTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,8 @@
 		5B7EB9410499542E8C5724F5 /* Pods-QooperTodo-QooperTodoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QooperTodo-QooperTodoTests.debug.xcconfig"; path = "Target Support Files/Pods-QooperTodo-QooperTodoTests/Pods-QooperTodo-QooperTodoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-QooperTodo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QooperTodo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6710C6F2286514DB00C07709 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6710C6F528651A7F00C07709 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		6710C6F728651E7600C07709 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = QooperTodo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-QooperTodo-QooperTodoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QooperTodo-QooperTodoTests.release.xcconfig"; path = "Target Support Files/Pods-QooperTodo-QooperTodoTests/Pods-QooperTodo-QooperTodoTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -88,6 +92,7 @@
 		13B07FAE1A68108700A75B9A /* QooperTodo */ = {
 			isa = PBXGroup;
 			children = (
+				6710C6F428651A6A00C07709 /* fonts */,
 				6710C6F2286514DB00C07709 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -107,6 +112,15 @@
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-QooperTodo-QooperTodoTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6710C6F428651A6A00C07709 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6710C6F728651E7600C07709 /* Poppins-SemiBold.ttf */,
+				6710C6F528651A7F00C07709 /* Poppins-Regular.ttf */,
+			);
+			name = fonts;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -246,9 +260,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6710C6F828651E7600C07709 /* Poppins-SemiBold.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				6710C6F3286514DB00C07709 /* GoogleService-Info.plist in Resources */,
+				6710C6F628651A7F00C07709 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

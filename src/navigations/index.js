@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {setUserData} from '../redux/store/user';
+import {useDispatch} from 'react-redux';
 
 import SingInScreen from '../screens/sing-in';
 import HomeScreen from '../screens/home';
@@ -10,10 +13,13 @@ const Stack = createStackNavigator();
 
 const AppNavigator = () => {
   const [initialScreen, setInitialScreen] = useState('');
+  const dispatch = useDispatch();
 
-  const onAuthStateChanged = user => {
+  const onAuthStateChanged = async user => {
     if (user) {
-      //getUserData and navigate Home
+      const userData = await AsyncStorage.getItem('userData');
+      dispatch(setUserData(JSON.parse(userData)));
+      setInitialScreen('Home');
     } else {
       setInitialScreen('SingIn');
     }
