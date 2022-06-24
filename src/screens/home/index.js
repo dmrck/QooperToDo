@@ -19,14 +19,16 @@ const Home = ({navigation}) => {
   }, []);
 
   const getTasksAsync = async () => {
-    console.log('UID:', userData.uid);
     const tasks = await getTasks(userData.uid);
     if (tasks.length > 0) {
       const taskArray = [];
       tasks.forEach(task => {
         taskArray.push(task);
       });
-      setTasks(taskArray);
+      setTasks([...taskArray]);
+    }
+    else {
+      setTasks([])
     }
   };
 
