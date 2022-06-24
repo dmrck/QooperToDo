@@ -8,8 +8,9 @@ import auth from '@react-native-firebase/auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {setUserData} from '../../redux/store/user';
 import {useDispatch} from 'react-redux';
+import { CommonActions } from '@react-navigation/native';
 
-const SingIn = () => {
+const SingIn = ({navigation}) => {
   const [username, setUsername] = useState('');
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
@@ -34,6 +35,16 @@ const SingIn = () => {
           };
           await AsyncStorage.setItem('userData', JSON.stringify(userData));
           dispatch(setUserData(userData));
+          navigation.dispatch(
+            CommonActions.reset({
+              index: 1,
+              routes: [
+                {
+                  name: 'Home',
+                },
+              ],
+            }),
+          );
         })
         .catch(error => {
           Alert.alert('Error', error.message);
