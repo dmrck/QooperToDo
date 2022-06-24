@@ -8,7 +8,7 @@ import auth from '@react-native-firebase/auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {setUserData} from '../../redux/store/user';
 import {useDispatch} from 'react-redux';
-import { CommonActions } from '@react-navigation/native';
+import {CommonActions} from '@react-navigation/native';
 
 const SingIn = ({navigation}) => {
   const [username, setUsername] = useState('');
@@ -62,6 +62,7 @@ const SingIn = ({navigation}) => {
           value={username}
           onChangeText={setUsername}
           errorMessage={'User name is required'}
+          testID="Username.Input"
         />
         <FunctionalTextInput
           ref={firstnameRef}
@@ -69,14 +70,19 @@ const SingIn = ({navigation}) => {
           value={firstname}
           onChangeText={setFirstname}
           errorMessage={'First name is required'}
+          testID="Firstname.Input"
         />
         <FunctionalTextInput
           placeholder={'Last Name'}
           value={lastname}
           onChangeText={setLastname}
+          testID="Lastname.Input"
         />
 
-        <TouchableOpacity onPress={onLogin} style={styles.loginBtn}>
+        <TouchableOpacity
+          testID="Login.Button"
+          onPress={onLogin}
+          style={styles.loginBtn}>
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
       </View>

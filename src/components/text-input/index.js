@@ -4,7 +4,7 @@ import {Colors, Regular} from '../../styles';
 import styles from './styles';
 
 const FunctionalTextInput = React.forwardRef(
-  ({placeholder, errorMessage, value, onChangeText}, ref) => {
+  ({placeholder, errorMessage, value, onChangeText, testID}, ref) => {
     const [error, setError] = React.useState(false);
 
     React.useImperativeHandle(ref, () => ({
@@ -26,6 +26,7 @@ const FunctionalTextInput = React.forwardRef(
     return (
       <View style={styles.container}>
         <TextInput
+          testID={testID}
           value={value}
           onChangeText={onChangeText}
           style={[styles.inputContainer, error ? styles.redBorder : {}]}
