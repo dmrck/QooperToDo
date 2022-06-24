@@ -33,7 +33,8 @@ const Home = ({navigation}) => {
   const onAddTask = async () => {
     if (newTask.trim() == '') return;
 
-    await addNewTask(userData.uid, 'Test 10');
+    await addNewTask(userData.uid, newTask);
+    getTasksAsync();
     setNewTask('');
   };
 
